@@ -8,6 +8,6 @@ var element = React.createElement(
  );
 
 ReactDOM.render (
-  element,
-  document.getElementById('yunmo')
+  <div>33</div>,
+  document.getElementById('app')
 );

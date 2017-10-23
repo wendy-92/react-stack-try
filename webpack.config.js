@@ -11,5 +11,7 @@ module.exports = {
     host: '0.0.0.0',
     port: 9091,
     contentBase: '.',
- }
+    inline: true,
+    hot: true,
+ },
 }
