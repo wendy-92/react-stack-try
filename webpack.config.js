@@ -4,12 +4,21 @@ module.exports = {
     path: __dirname + '/build',
     filename: 'bundle.js'
   },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
   module: {
-    loaders: []
+    rules: [
+      {
+        test: /\.jsx?$/,
+        use: ['babel-loader'],
+        exclude: ['./node_modules'],
+      },
+    ],
   },
   devServer: {
     host: '0.0.0.0',
     port: 9091,
     contentBase: '.',
  },
-}
+} 
