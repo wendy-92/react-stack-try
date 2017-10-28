@@ -1,6 +1,6 @@
 import React from 'react';
 
-class hello extends React.PureComponent{
+class Hello extends React.PureComponent{
     render(){
         return(
             <h1>hello, world</h1>
@@ -8,4 +8,4 @@ class hello extends React.PureComponent{
     }
 }
 
-export default hello;
+export default Hello;
