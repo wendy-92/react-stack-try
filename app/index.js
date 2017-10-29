@@ -3,10 +3,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Hello from './hello';
+import ProviderRouter from '../router';
 
 ReactDOM.render((
-  <div>
-    1
-    <Hello />
-  </div>
+  <ProviderRouter />
 ), document.getElementById('app'));
