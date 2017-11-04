@@ -11,26 +11,29 @@ class ProviderRouter extends React.Component{
         }
     }
     componentDidMount(){
-        window.addEventListener('hashChange', () => {this.setState({
-            route: window.location.hash.substr(1),
-        })});
+        window.addEventListener('hashchange', () => {
+            this.setState({
+                router: window.location.hash.substr(1),
+            });
+        });
     }
 
     render(){
-        const child = '';
+        let child = '';
         switch(this.state.router){
-            case 'hello': 
-              return <Hello />;
+            case '/hello': 
+              child = <Hello />;
+              break;
             default: 
-              return <div />;
+              child = <div />;
         }
-        console.log(this.state.router);
+        console.log(this.state.router, this.state.router === '/hello');
         return(
         <div>
             <h1>App</h1>
             <ul>
             <li><a href="#/about">About</a></li>
-            <li><a href="#/hello">Inbox</a></li>
+            <li><a href="#/hello">hello</a></li>
             </ul>
             {child}
         </div>
