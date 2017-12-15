@@ -1,9 +1,17 @@
 import React from 'react';
 
-class Hello extends React.PureComponent{
+class Hello extends React.Component{
+    constructor(props) {
+        super(props);
+    }
+
     render(){
         return(
-            <h1>hello, world</h1>
+            <div>
+                <h1>hello, world</h1>
+                {this.props.children}1
+            </div>
+            
         )
     }
 }

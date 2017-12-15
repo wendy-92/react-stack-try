@@ -27,5 +27,17 @@ module.exports = {
     host: '0.0.0.0',
     port: 9091,
     contentBase: '.',
+    historyApiFallback: {
+      rewrites: [
+        // fallback to index.html
+        { from: /^\/.*$/, to: '/public/index.html' },
+        { // same with production server, redirect to static folder
+          from: /^\/(.*)$/,
+          to(context) {
+            return `/static/${context.match[1]}`;
+          },
+        },
+      ],
+    },
  },
 } 
