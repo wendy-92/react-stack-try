@@ -4,6 +4,8 @@ import { Router, Route, browserHistory,
 
 import Hello from '../app/Hello';
 import About from '../app/components/About';
+import Todo from '../app/components/todo/Todo';
+
 
 class ProviderRouter extends React.Component{
     constructor(props) {
@@ -15,6 +17,7 @@ class ProviderRouter extends React.Component{
         <Router history={browserHistory}>
             <Route path="/" component={Hello}>
                 <Route path="about" component={About} />
+                <Route path="todo" component={Todo} />
             </Route>
         </Router>
         );
