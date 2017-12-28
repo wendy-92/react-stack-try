@@ -1,7 +1,13 @@
 import AddTodo, * as AddTodoActions from './addTodo';
-import { createStore } from 'redux';
+import { combineReducers } from 'redux';
+
+const Todo = combineReducers({
+    AddTodo,
+});
+
+export default Todo;
 
 export {
-    AddTodo,
     AddTodoActions,
 };
+

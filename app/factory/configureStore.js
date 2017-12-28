@@ -1,7 +1,8 @@
-import { createStore, combineReducers } from 'redux';
-import { AddTodo, TodoActions } from '../components/todo/redux';
-const reducer = combineReducers({
-    AddTodo,
-  });
-const store = createStore(reducer,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+import { createStore } from 'redux';
+import rootReducers from './rootReducers';
+
+const store = createStore(
+  rootReducers,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+console.log(store.getState())
 export default store;

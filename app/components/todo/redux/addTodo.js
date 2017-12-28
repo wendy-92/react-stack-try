@@ -3,16 +3,16 @@ import {
     Add_TODO,
 } from './actions';
 const initialState = {
-    data: '4',
+    data: [],
 }
 
 function AddTodo(state = initialState, action){
     switch(action.type){
         case 'ADD_TODO_ITEM':
-            return Object.assign({}, state, {
-
-            })
-        default: return state;
+            state.data.push(action.data);
+            return state;
+        default:
+            return state;
     }
 }
 
