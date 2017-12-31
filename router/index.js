@@ -5,6 +5,7 @@ import { Router, Route, browserHistory,
 import Hello from '../app/Hello';
 import About from '../app/components/About';
 import PageTodo from '../app/views/PageTodo';
+import PageMusic from '../app/views/PageMusic';
 
 
 class ProviderRouter extends React.Component{
@@ -18,6 +19,7 @@ class ProviderRouter extends React.Component{
             <Route path="/" component={Hello}>
                 <Route path="about" component={About} />
                 <Route path="todo" component={PageTodo} />
+                <Route path="music" component={PageMusic} />
             </Route>
         </Router>
         );
