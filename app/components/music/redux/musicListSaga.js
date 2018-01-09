@@ -9,5 +9,4 @@ export function* watchGetMusicList() {
         const action = yield take(GET_MUSIC_LIST);
         console.log('get action', action);
     }
-    
 }
