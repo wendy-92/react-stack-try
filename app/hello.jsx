@@ -9,7 +9,7 @@ class Hello extends React.Component{
         return(
             <div>
                 <h1>hello, world</h1>
-                {this.props.children}1
+                {this.props.children}
             </div>
             
         )

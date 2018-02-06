@@ -5,16 +5,31 @@ import TodoList from './TodoList';
 
 @observer
 class TodoListView extends Component {
+    constructor(props) {
+        super(props);
+    }
+    changeAddTodo = (ev) => {
+        const value = ev.target.value;
+        this.props.todoList.setTodo(value);
+    }
+    submit = () => {
+        this.props.todoList.add();
+    }
     render() {
-        console.log(this.props);
-        return <div>
-            <ul>
-                {this.props.todoList.todos.map(todo =>
-                    <TodoView todo={todo} key={todo.id} />
-                )}
-            </ul>
-            Tasks left: {this.props.todoList.unfinishedTodoCount}
-        </div>
+        return(
+            <div>
+                <ul>
+                    {this.props.todoList.todos.map(todo =>
+                        <TodoView todo={todo} key={todo.id} />
+                    )}
+                </ul>
+                Tasks left: {this.props.todoList.unfinishedTodoCount}
+                <div>
+                    Add todo:<input type="text" name="todo" value={this.props.todoList.addTodo} onChange={this.changeAddTodo}/>
+                            <button onClick={this.submit}>submit</button>
+                </div>
+            </div>
+        )
     }
 }
 

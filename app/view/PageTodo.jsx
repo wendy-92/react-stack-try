@@ -9,7 +9,6 @@ class PageTodo extends React.PureComponent {
 
   render() {
     const store = new TodoList();
-    console.log(store)
     return (
       <div>
           <TodoListView todoList={store}/>
